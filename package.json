@@ -1,7 +1,7 @@
 {
-  "name": "test",
+  "name": "SudokuCreator",
   "version": "1.0.0",
-  "description": "Test Project",
+  "description": "An app to create Sudoku puzzles",
   "main": "app.js",
   "dependencies": {
     "pug": "^2.0.0-rc.4",
