@@ -1,0 +1,22 @@
+head
+  title Sudoku Thing
+  script(src='views/main.js')
+  link(href='views/main.css', rel='stylesheet')
+body
+  table.sudoku
+    each row, i in grid
+      tr
+        each val, j in row
+          if j % 3 == 0 && i % 3 == 0
+            td.cell.topwall.leftwall #{val}
+          else if i % 3 == 0
+            td.cell.topwall #{val}
+          else if j % 3 == 0
+            td.cell.leftwall #{val}
+          else
+            td.cell #{val}
+        
+  div.customize
+    div To change the alphabet used, enter a comma-separated list of the nine characters to use.
+    input(name=alphabet, type='text', placeholder='For example: α,β,γ,δ,ε,ζ,η,Θ,π')#alphabet
+    button#regenerate Regenerate!
